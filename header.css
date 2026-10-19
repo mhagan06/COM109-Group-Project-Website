@@ -1,0 +1,156 @@
+/* Sets the font and boldness for the main headings and logo */
+.header-hero-font, header, .hero-content, .hero-content h1, .logo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+/* Styles the top navigation bar and keeps it at the top when scrolling */
+header {
+    background: #1a1a1a;
+    color: white;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Aligns the logo and the menu links in a row */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styles the main logo text */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Changes the color of the second part of the logo */
+.logo span { color: #ffb400; }
+
+/* Groups the search bar and links together with spacing */
+.nav-links-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Displays the menu links in a horizontal line */
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    align-items: center; 
+}
+
+/* Centers the content inside each list item */
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles the text for each menu link */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+/* Changes link color when you hover over it */
+nav ul li a:hover {
+    color: #ffb400;
+}
+
+/* Highlights the link for the page you are currently on */
+.active-link {
+    color: #ffb400 !important;
+}
+
+/* Styles the "Book Now" button in the menu */
+#cta-btn {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffb400;
+    color: #1a1a1a;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 50px;
+}
+
+/* Styles the search bar container */
+.search-box {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    background: #1a1a1a; 
+    border: 1px solid #ffb400; 
+    border-radius: 25px;
+    padding: 5px 15px;
+}
+
+/* Styles the text input field inside the search bar */
+.search-box input {
+    background: transparent;
+    border: none;
+    color: #ffffff; 
+    outline: none;
+    font-size: 0.9rem;
+    width: 130px;
+}
+
+/* Changes the color of the placeholder text */
+.search-box input::placeholder { color: #bbb; }
+
+/* Styles the 'Go' button inside the search bar */
+.search-box button {
+    background: transparent;
+    border: none;
+    color: #ffb400; 
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding-left: 8px;
+    letter-spacing: 1px;
+}
+
+/* Styles the popup box that shows search results */
+.suggestions-popup {
+    position: absolute;
+    top: 120%; 
+    left: 0;
+    width: 100%;
+    background: #1a1a1a; 
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    display: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* Styles each individual result inside the search popup */
+.suggestion-item {
+    padding: 12px 15px;
+    color: #ffffff; 
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #333;
+    transition: all 0.2s ease;
+}
+
+/* Highlights a search result when you hover over it */
+.suggestion-item:hover {
+    background: #ffb400; 
+    color: #1a1a1a; 
+    font-weight: bold;
+}

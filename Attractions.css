@@ -1,0 +1,68 @@
+/* Styling for the attraction images */
+.attraction-img {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 4px solid #ffb400;
+}
+
+/* Label in the top corner of the image */
+.category-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(26, 26, 26, 0.85);
+    color: #ffb400;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Small bar for location and time info */
+.quick-info {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0 20px 0;
+    font-size: 0.8rem;
+    color: #888;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    width: 100%;
+}
+
+/* Align text and icons in the info bar */
+.quick-info span {
+    display: flex;
+    align-items: center;
+}
+
+/* Changes button appearance on hover */
+.card .btn-primary:hover {
+    letter-spacing: 1px;
+    background: #1a1a1a;
+    color: #ffb400;
+    align-items: center;
+}
+
+/* Center the buttons inside the cards */
+.card .btn-primary {
+    display: block;       
+    margin: 16px auto 0;  
+    max-width: 220px;     
+    text-align: center;   
+}
+
+/* Space between the card list and the footer */
+.card-container {
+    margin-bottom: 40px;
+}
+
+/* Smaller space for mobile screens */
+@media (max-width: 768px) {
+    .card-container { margin-bottom: 24px; }
+}

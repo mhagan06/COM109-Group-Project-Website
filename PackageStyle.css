@@ -1,0 +1,321 @@
+/* 1. CORE STYLES */
+/* Reset spacing and set the default font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 4. GRID SYSTEM & CARDS */
+/* Center the content and add space to the grid section */
+.grid-section { 
+    padding: 50px 5%; 
+    text-align: center;
+}
+
+/* Style the main title of the section */
+.grid-section h1 { 
+    font-size: 2.5rem; 
+    margin-bottom: 10px; 
+}
+
+/* Create a 3-column layout for the cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* Style the individual white cards */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 450px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Lift the card slightly when the mouse is over it */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* 5. GALLERY SECTION */
+/* Create the image area at the top of each card */
+.package-gallery {
+    height: 220px; 
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3px solid #ffb400;
+}
+
+/* Style the main image to cover the area */
+.main-img {
+    height: 85%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Create a dark bar for small dots beneath the image */
+.thumb-strip {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: #1a1a1a;
+}
+
+/* Style the small round dots (thumbnails) */
+.thumb {
+    width: 10px;
+    height: 10px;
+    background-color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Turn the dot yellow when hovering */
+.thumb:hover {
+    background-color: #ffb400;
+}
+
+/* 6. CARD BODY & EXPANSION LOGIC */
+/* Style the text area inside the card */
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+
+/* Style the small black and yellow price label */
+.price-tag {
+    background: #1a1a1a;
+    color: #ffb400;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* Style titles and text inside the card */
+.card-body h3 { 
+    font-size: 1.25rem; 
+    margin-bottom: 8px; 
+}
+
+.card-body p { 
+    font-size: 0.9rem; 
+    color: #666; 
+}
+
+/* Hide the extra details by default */
+.extra-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    margin-top: 0;
+}
+
+/* Slide down and show extra details when this class is added */
+.extra-details.show {
+    max-height: 200px; 
+    opacity: 1;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Style the text inside the expanded area */
+.extra-details p {
+    font-size: 0.85rem;
+    color: #444;
+    font-style: italic;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+/* Darken the button color on hover */
+.btn-primary:hover {
+    background: #e5a200;
+}
+
+/* Main style for yellow round buttons */
+.btn-primary, #cta-btn {
+    background: #ffb400;
+    color: #1a1a1a;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 7. MAP SECTION */
+/* Add space to the map area */
+.find-us-section {
+    padding: 60px 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Create the rounded container for the Google Map */
+.map-container {
+    max-width: 1100px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid #ffb400;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 9. RESPONSIVE DESIGN */
+/* Change to 2 columns for medium screens */
+@media (max-width: 992px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Stack everything in 1 column for phones */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- MODAL BACKGROUND (OVERLAY) --- */
+/* Style the dark background that covers the page when the form pops up */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    backdrop-filter: blur(4px); 
+}
+
+/* --- THE FORM CONTAINER (WHITE BOX) --- */
+/* Style the white box in the center of the screen */
+.modal-content {
+    background-color: #ffffff;
+    margin: 8% auto; 
+    padding: 35px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* --- CLOSE BUTTON (X) --- */
+/* Style the close button in the top right corner */
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #1a1a1a;
+}
+
+/* --- FORM HEADER STYLES --- */
+.modal-content h2 {
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    font-size: 1.8rem;
+}
+
+.modal-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* --- INPUT FIELD STYLING --- */
+/* Add space between each form question */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; 
+}
+
+/* Style the text label above each box */
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #1a1a1a;
+}
+
+/* Style the text boxes and dropdown menus */
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Turn the box border yellow when the user clicks on it */
+.form-group input:focus, 
+.form-group select:focus {
+    border-color: #ffb400;
+}
+
+/* --- SUBMIT BUTTON --- */
+/* Style the button at the bottom of the form */
+#bookingForm .btn-primary {
+    width: 100%; 
+    padding: 14px;
+    background: #ffb400;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Darken the submit button on hover */
+#bookingForm .btn-primary:hover {
+    background: #e5a200;
+}

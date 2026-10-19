@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belfast Unfolded | Travel Packages</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/PackageStyle.css">
+</head>
+<body>
+
+    <header>
+    <nav>
+        <div class="logo">Belfast<span>Unfolded</span></div>
+        
+        <div class="nav-links-container">
+            <div class="search-box">
+                <input type="text" id="headerSearch" placeholder="Search..." autocomplete="off">
+                <button onclick="executeSearch()">Go</button>
+                <div id="searchSuggestions" class="suggestions-popup"></div>
+            </div>
+
+            <ul>
+            <li><a href="Home.html">Home</a></li> 
+            <li><a href="history.html">History</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="Travel.html">Travelling to Belfast</a></li>
+            <li><a href="Packages.html" class="active-link">Packages</a></li> 
+            <li><button id="cta-btn">Book Now</button></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <section class="hero">
+    <div class="hero-slide active" style="background-image: url('../assets/images/PackagePage.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('../assets/images/PackagePage2.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('../assets/images/PackagePage3.jpg');"></div>
+
+
+    <div class="hero-content">
+        <h1>Check out our Packages.</h1>
+
+        <a href="#attractions" class="btn-primary">Start Exploring</a>
+    </div>
+    
+
+    </section>
+
+    <section id="attractions" class="grid-section">
+        <h1 style="align-items: center;">Travel Packages</h1>
+        <p style="align-items: center;">Curated experiences for every type of explorer.</p>
+        
+        <div class="card-container">
+        <div class="card">
+            <div class="package-gallery">
+                <div class="main-img" style="background-image: url('../assets/images/TitanicHotel1.JPG');"></div>
+                <div class="thumb-strip">
+                    <div class="thumb" style="background-image: url('../assets/images/TitanicHotel1.JPG');"></div>
+                    <div class="thumb" style="background-image: url('../assets/images/TitanicHotel2.avif');"></div>
+                    <div class="thumb" style="background-image: url('../assets/images/TitanicHotel3.webp');"></div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="price-tag">£299</div>
+                <h3>The Titanic Explorer</h3>
+                <p>2 Nights stay, VIP Titanic tickets, and a guided tour.</p>
+                <div class="extra-details">
+                    <p>Includes a luxury stay at the Titanic Hotel, a private "Black Taxi" tour of the shipyards, and late-night access to the museum galleries with a dedicated historian.</p>
+                </div>
+                <button class="btn-primary toggle-details">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="package-gallery">
+                <div class="main-img" style="background-image: url('../assets/images/Culture1.png');"></div>
+                <div class="thumb-strip">
+                    <div class="thumb" style="background-image: url('../assets/images/Culture1.png');"></div>
+                    <div class="thumb" style="background-image: url('../assets/images/Culture2.jpeg');"></div>
+                    <div class="thumb" style="background-image: url('../assets/images/Culture3.webp');"></div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="price-tag">£150</div>
+                <h3>Culture & Craic</h3>
+                <p>Mural walking tour, music session entry, and a pub lunch.</p>
+                <div class="extra-details">
+                    <p>Experience the famous Belfast hospitality. This package includes a reserved table at a traditional session, a 3-course lunch, and a guided mural tour of West Belfast.</p>
+                </div>
+                <button class="btn-primary toggle-details">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="package-gallery">
+                <div class="main-img" style="background-image: url('../assets/images/Giants1.jpg');"></div>
+                <div class="thumb-strip">
+                    <div class="thumb" style="background-image: url('../assets/images/Giants1.jpg');"></div>
+                    <div class="thumb" style="background-image: url('../assets/images/Giants2.jpg');"></div>
+                    <div class="thumb" style="background-image: url('../assets/images/Giants3.jpeg');"></div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="price-tag">£450</div>
+                <h3>Coast & City</h3>
+                <p>Giant's Causeway trip plus 3 nights in a city hotel.</p>
+                <div class="extra-details">
+                    <p>A full-day luxury coach trip to the North Coast, including the Giant's Causeway and Carrick-a-Rede Rope Bridge, paired with a central 4-star city stay.</p>
+                </div>
+                <button class="btn-primary toggle-details">View Details</button>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Belfast Unfolded. Built for the curious traveler.</p>
+    </footer>
+
+    <script src="../js/PackageScript.js"></script>
+    <script src="../js/Form.js"></script>
+</body>
+</html>

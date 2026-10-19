@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belfast Attractions | Belfast Unfolded</title>
+     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/Attractions.css">
+</head>
+
+<body>
+
+    <header>
+    <nav>
+        <div class="logo">Belfast<span>Unfolded</span></div>
+         
+        <div class="nav-links-container">
+            <div class="search-box">
+                <input type="text" id="headerSearch" placeholder="Search..." autocomplete="off">
+                <button onclick="executeSearch()">Go</button>
+                
+                <div id="searchSuggestions" class="suggestions-popup"></div>
+            </div>
+ 
+            <ul>
+            <li><a href="Home.html">Home</a></li>  
+            <li><a href="History.html">History</a></li>
+            <li><a href="Attractions.html" class="active-link">Attractions</a></li>
+            <li><a href="Travel.html">Travelling to Belfast</a></li>
+            <li><a href="Packages.html">Packages</a></li>  
+            <li><button id="cta-btn">Book Now</button></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+    <section class="hero">
+    <div class="hero-slide active" style="background-image: url('../assets/images/attractions1.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('../assets/images/attractions2.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('../assets/images/attractions3.jpeg');"></div>
+
+    <div class="hero-content">
+        <h1>Explore the City's Entertainment</h1>
+        <a href="#attractions" class="btn-primary">Start Exploring</a>
+    </div>
+    </section>
+
+    <section class="grid-section">
+    <h1>Belfast Landmarks</h1>
+    <p>Discover the history, culture, and beauty of our city.</p>
+    </section>  
+
+    <section id="attractions" class="card-container">
+        <div class="card">
+            <div class="attraction-img" style="background-image: url('../assets/images/attractions4.jpg');">
+                <span class="category-tag">Maritime</span>
+            </div>
+            <div class="card-body">
+                <h3>Titanic Belfast</h3>
+                <p>The world's leading visitor attraction located at the birthplace of the RMS Titanic.</p>
+                <div class="quick-info">
+                    <span>📍 Titanic Quarter</span>
+                    <span>⏱️ 3-4 Hours</span>
+                </div>
+                <button class="btn-primary" onclick="openMap('Titanic Belfast')">View on Map</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="attraction-img" style="background-image: url('../assets/images/attractions5.jpg');">
+                <span class="category-tag">Culture</span>
+            </div>
+            <div class="card-body">
+                <h3>St George's Market</h3>
+                <p>One of Belfast's oldest attractions, offering local food, crafts, and live music.</p>
+                <div class="quick-info">
+                    <span>📍 City Centre</span>
+                    <span>⏱️ Fri-Sun Only</span>
+                </div>
+                <button class="btn-primary">Market Guide</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="attraction-img" style="background-image: url('../assets/images/attractions6.jpg');">
+                <span class="category-tag">History</span>
+            </div>
+            <div class="card-body">
+                <h3>Belfast Castle</h3>
+                <p>Perched on Cave Hill, offering stunning panoramic views of the city and lough.</p>
+                <div class="quick-info">
+                    <span>📍 Cave Hill</span>
+                    <span>⏱️ 1-2 Hours</span>
+                </div>
+                <button class="btn-primary">Trail Map</button>
+            </div>
+        </div>
+
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2026 Belfast Unfolded. Built for the curious traveler.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/Attractions.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/Form.js"></script>
+
+</body>
+</html>

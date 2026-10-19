@@ -1,0 +1,221 @@
+/* --- GLOBAL RESET & BASE --- */
+/* Reset margins and padding, and set the default font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Set the default background and text colors */
+body {
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- HERO SECTION --- */
+/* Style the main banner at the top of the page */
+.hero {
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: #1a1a1a; 
+    overflow: hidden;
+}
+
+/* Style the images that fade in and out in the background */
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    z-index: 1; 
+}
+
+/* Show the active slide image */
+.hero-slide.active {
+    opacity: 1;
+}
+
+/* Position the text so it stays on top of the images */
+.hero-content {
+    position: relative;
+    z-index: 10; 
+    padding: 0 20px;
+}
+
+/* Style the large title and add a shadow for better reading */
+.hero-content h1 {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+    margin-bottom: 10px;
+}
+
+/* Style the description text below the title */
+.hero-content p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* --- NAVIGATION & BUTTONS --- */
+/* Style the main yellow buttons */
+.btn-primary, #cta-btn {
+    background: #ffb400;
+    color: #1a1a1a;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Darken the button and grow it slightly on hover */
+.btn-primary:hover, #cta-btn:hover {
+    background: #e5a200;
+    transform: scale(1.03);
+}
+
+/* --- INFO & LAYOUT SECTIONS --- */
+/* Create a flexible area for text and images side-by-side */
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 10%;
+    background: white;
+}
+
+/* Allow columns to grow and set a minimum width */
+.left-column, .right-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Style the images inside the right column */
+.right-column img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* --- DROPDOWN SYSTEM --- */
+/* Set the width and center the dropdown container */
+.dropdown-wrapper {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* Style the button that opens the dropdown */
+.dropdown-btn {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #ffb400;
+    padding: 20px;
+    text-align: left;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* Add a small arrow to the dropdown button */
+.dropdown-btn::after {
+    content: "▼";
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the arrow when the dropdown is open */
+.dropdown-btn.active::after {
+    transform: rotate(180deg);
+}
+
+/* Hide the content box until it is opened */
+.dropdown-content {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 15px;
+}
+
+/* --- MAP SECTIONS --- */
+/* Style the dark area containing the location maps */
+.map-section {
+    padding: 60px 10%;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+/* Arrange maps into a 3-column grid */
+.maps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: start;
+    margin-top: 30px;
+}
+
+/* Style the dark cards that hold the maps */
+.map {
+    width: 100%;
+    background: #2e2f37;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Switch to 2 columns on tablets */
+@media (max-width: 992px) {
+    .maps { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Switch to 1 column on phones */
+@media (max-width: 640px) {
+    .maps { grid-template-columns: 1fr; }
+}
+
+/* Style the actual Google Maps frames */
+.map iframe {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+/* Shrink hero text and adjust padding for mobile screens */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .info-section {
+        padding: 40px 5%;
+    }
+}

@@ -1,0 +1,621 @@
+/* Reset margins and padding, and set the default font for the whole site */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Define main colors and reusable styles like shadows and curves */
+:root {
+  --primary: #1a1a1a;
+  --accent: #ffb400;
+  --light-bg: #f5f5f0;
+  --white: #ffffff;
+  --text: #ffffff;
+  --text-light: #666;
+  --border: #ddd;
+  --timeline-line: #ffb400;
+  --shadow: 0 4px 20px rgba(0,0,0,0.1);
+  --radius: 10px;
+  --transition: 0.3s ease;
+}
+
+/* Smooth scrolling when clicking on links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set the default text color and background for the page body */
+body {
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.7;
+}
+
+/* Center the content and limit its maximum width */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Add vertical space to each main section */
+.section {
+  padding: 5rem 0;
+}
+
+/* Make the navigation bar stay at the top of the screen */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--primary);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Align the logo and links in a row within the navbar */
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+}
+
+/* Style the logo text */
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Color the span part of the logo yellow */
+.nav-logo span {
+    color: #ffb400;
+}
+
+/* Style the list of links in the navigation bar */
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+/* Style individual links and add hover effects */
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #ffb400;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+/* Style the large top banner with a background image */
+.hero {
+  position: relative;
+  height: 85vh;
+  min-height: 500px;
+  background-image: url(titanichw.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Add a faint yellow decorative pattern over the hero image */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(200,146,42,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(200,146,42,0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Darken the hero image so the text is easier to read */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 25, 47, 0.45);
+}
+
+/* Position the text content on top of the hero image */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  padding: 0 1.5rem;
+  animation: fadeInUp 0.9s ease;
+}
+
+/* Style the small text above the main hero title */
+.hero-subtitle {
+  color: var(--accent);
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Style the main large heading in the hero section */
+.hero-title {
+  color: var(--white);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+
+/* Style the description text in the hero section */
+.hero-desc {
+  color: rgba(#ffffff);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style the main call-to-action button */
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  padding: 0.85rem 2.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background var(--transition), transform var(--transition);
+}
+
+/* Add a hover effect to the button */
+.btn-primary:hover {
+  background: #ffb400;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   INTRO SECTION
+=========================== */
+/* Style the introductory text area */
+.intro {
+  background: var(--light-bg);
+  text-align: center;
+}
+
+.intro p {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+/* ===========================
+   SECTION TITLES
+=========================== */
+/* Style the titles for each section of the page */
+.section-title {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+
+/* Add a yellow underline beneath section titles */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  margin: 0.7rem auto 0;
+  border-radius: 2px;
+}
+
+/* Style the subtitle text beneath the section title */
+.section-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   TIMELINE SECTION
+=========================== */
+/* Style the area where the history timeline is located */
+.timeline-section {
+  background: var(--white);
+}
+
+/* Position the timeline container */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* Create the vertical line in the middle of the timeline */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--timeline-line);
+  transform: translateX(-50%);
+}
+
+/* Position items on the left side of the timeline */
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: calc(50% + 2.5rem);
+  margin-bottom: 3rem;
+  position: relative;
+  animation: fadeInLeft 0.6s ease both;
+}
+
+/* Position every second item on the right side of the timeline */
+.timeline-item:nth-child(even) {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: calc(50% + 2.5rem);
+  animation-name: fadeInRight;
+}
+
+/* Style the yellow dot on the center timeline line */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 1.2rem;
+  width: 18px;
+  height: 18px;
+  background: var(--accent);
+  border: 3px solid var(--white);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: transform var(--transition);
+}
+
+/* Make the dot grow when you hover over the timeline item */
+.timeline-item:hover .timeline-dot {
+  transform: translateX(-50%) scale(1.3);
+}
+
+/* Style the boxes containing the history text */
+.timeline-content {
+  background: var(--light-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  max-width: 380px;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+/* Lift the box and strengthen the shadow on hover */
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+}
+
+/* Style the date labels inside the boxes */
+.timeline-date {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 0.78rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+/* Style the titles inside the timeline boxes */
+.timeline-content h3 {
+  color: var(--primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Style the description text inside the timeline boxes */
+.timeline-content p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   MODAL SECTION
+=========================== */
+/* Style the dark background when a popup is open */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+/* Show the overlay when it is active */
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Style the actual popup box */
+.modal {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  max-width: 560px;
+  width: 100%;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform var(--transition);
+  border-top: 5px solid var(--accent);
+}
+
+/* Move the box into place when active */
+.modal-overlay.active .modal {
+  transform: translateY(0);
+}
+
+/* Style the 'X' button to close the popup */
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-light);
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--primary);
+}
+
+/* Style the title inside the popup */
+#modalTitle {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Style the text body inside the popup */
+#modalText {
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* ===========================
+   FACTS SECTION
+=========================== */
+/* Style the dark section containing interesting facts */
+.facts-section {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.facts-section .section-title {
+  color: var(--white);
+}
+
+.facts-section .section-title::after {
+  background: var(--accent);
+}
+
+/* Organize the facts into a grid layout */
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+/* Style individual fact cards */
+.fact-card {
+  padding: 2rem 1rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.05);
+  transition: background var(--transition);
+}
+
+.fact-card:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Style the numbers and symbols in fact cards */
+.fact-number {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.fact-symbol {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.fact-card p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ===========================
+   QUOTE SECTION
+=========================== */
+/* Style the centered section for quotes */
+.quote-section {
+  background: var(--light-bg);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.quote-section blockquote {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--primary);
+  position: relative;
+  padding: 0 2rem;
+}
+
+/* Add large decorative quotation marks */
+.quote-section blockquote::before {
+  content: '"';
+  font-size: 5rem;
+  color: var(--accent);
+  position: absolute;
+  left: -0.5rem;
+  top: -2rem;
+  line-height: 1;
+}
+
+/* ===========================
+   SPOTS SECTION
+=========================== */
+/* Style the section for location highlights */
+.spots-section {
+  background: var(--white);
+}
+
+/* Organize spots into a grid layout */
+.spots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Style individual location cards */
+.spot-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+  background: var(--white);
+}
+
+.spot-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+/* Style the icons at the top of spot cards */
+.spot-icon {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.spot-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.spot-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   FOOTER SECTION
+=========================== */
+/* Style the bottom footer of the page */
+.footer {
+  background: #1a1a1a;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+/* Animation to fade in and slide up */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation to fade in and slide from the left */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Animation to fade in and slide from the right */
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ===========================
+   RESPONSIVE LAYOUT
+=========================== */
+/* Adjust the layout for tablets and phones */
+@media (max-width: 768px) {
+  /* Hide the desktop navigation links */
+  .nav-links { display: none; }
+
+  /* Move the timeline line to the left side */
+  .timeline::before { left: 20px; }
+
+  /* Align all timeline items to the left */
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: 55px;
+    padding-right: 0;
+  }
+
+  /* Move the timeline dots to the left */
+  .timeline-dot {
+    left: 20px;
+  }
+
+  /* Make timeline boxes take up the full width */
+  .timeline-content {
+    max-width: 100%;
+  }
+
+  /* Shrink the hero section height on mobile */
+  .hero { height: 70vh; }
+}

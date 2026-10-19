@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belfast Unfolded | Explore the North</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Belfast<span>Unfolded</span></div>
+        
+        <div class="nav-links-container">
+            <div class="search-box">
+                <input type="text" id="headerSearch" placeholder="Search..." autocomplete="off">
+                <button onclick="executeSearch()">Go</button>
+                
+                <div id="searchSuggestions" class="suggestions-popup"></div>
+            </div>
+
+            <ul>
+            <li><a href="Home.html" class="active-link">Home</a></li> 
+            <li><a href="History.html">History</a></li>
+            <li><a href="Attractions.html">Attractions</a></li>
+            <li><a href="Travel.html">Travelling to Belfast</a></li>
+            <li><a href="Packages.html">Packages</a></li> 
+            <li><button id="cta-btn">Book Now</button></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <section class="hero">
+    <div class="hero-slide active" style="background-image: url('../assets/images/bigfish.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('../assets/images/Belfastroad.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('../assets/images/titanicquarter.jpg');"></div>
+
+
+    <div class="hero-content">
+        <h1>Discover a City with No Limits.</h1>
+        <p>From the birthplace of the Titanic to the vibrant murals of the Cathedral Quarter.</p>
+        <a href="#attractions" class="btn-primary">Start Exploring</a>
+    </div>
+    </section>
+
+
+    <section class="intro-section">
+    <div class="intro-content">
+        <h2>Authentic Belfast Experiences</h2>
+        <p>
+            At <strong>Belfast Unfolded</strong>, We don’t just book tours. We share stories. We want to show you the real North. We take you from the famous shipyards to the tiny hidden streets that most tourists miss. To us, a tour is more than just looking at buildings. 
+            It is about meeting the local people and hearing the legends that made this place what it is today.
+            Whether you love history, local culture, or just a good laugh (the craic!), we are here for you. 
+            We take care of all the plans and the timing. This means you can stop worrying and just enjoy your trip. You won’t just see the North—you will feel part of it.
+        </p>
+    </div>
+    </section>
+
+    <section id="attractions" class="grid-section">
+        <h2>Unfold the Experience</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Titanic Belfast</h3>
+                <p>Explore the world's leading visitor attraction at the very site where the "Ship of Dreams" was built.</p>
+            </div>
+            <div class="card">
+                <h3>Cathedral Quarter</h3>
+                <p>The heart of Belfast's nightlife, packed with street art, cozy pubs, and live music.</p>
+            </div>
+            <div class="card">
+                <h3>Cave Hill</h3>
+                <p>Hike up to "Napoleon's Nose" for a panoramic view of the city and the Lough.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="find-us-section">
+    <h2>Where to Find Us</h2>
+    <p>Our main meeting point is right in the heart of the city at Belfast City Hall.</p>
+    
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2311.423974661347!2d-5.932631323162124!3d54.59652328045297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486108562bdafb9d%3A0xca487e246c18e7d7!2sBelfast%20City%20Hall%2C%20Belfast%20BT1%205JD!5e0!3m2!1sen!2suk!4v1776348633964!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Belfast Unfolded. Built for the curious traveler.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/Form.js"></script>
+</body>
+</html>

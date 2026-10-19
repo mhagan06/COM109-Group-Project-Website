@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>History of Belfast | Belfast Unfolded</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/History.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="logo">Belfast<span>Unfolded</span></div>
+        
+        <div class="nav-links-container">
+            <div class="search-box">
+                <input type="text" id="headerSearch" placeholder="Search..." autocomplete="off">
+                <button onclick="executeSearch()">Go</button>
+                
+                <div id="searchSuggestions" class="suggestions-popup"></div>
+            </div>
+
+            <ul>
+            <li><a href="Home.html">Home</a></li> 
+            <li><a href="History.html" class="active-link">History</a></li>
+            <li><a href="Attractions.html">Attractions</a></li>
+            <li><a href="Travel.html">Travelling to Belfast</a></li>
+            <li><a href="Packages.html">Packages</a></li> 
+            <li><button id="cta-btn">Book Now</button></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+  <!-- Hero Section -->
+   <section class="hero">
+    <div class="hero-slide active" style="background-image: url('../assets/images/history1.jpg');"></div>
+    
+    <div class="hero-content">
+        <p class="hero-subtitle">Discover the Past</p>
+      <h1 class="hero-title">The History of Belfast</h1>
+      <p class="hero-desc">From a small ford on the River Lagan to a vibrant modern city — explore over 400 years of Belfast's remarkable story.</p>
+      <a href="#timeline" class="btn-primary">Explore the Timeline</a>
+    </div>
+    </section>
+  </header>
+
+  <!-- Intro Section -->
+  <section class="intro section">
+    <div class="container">
+      <h2 class="section-title">A City Forged Through History</h2>
+      <p>Belfast, the capital of Northern Ireland, has a rich and complex history spanning centuries. Its story is one of growth, industry, conflict, and remarkable resilience. Today it stands as one of the UK and Ireland's most exciting cities to visit — and understanding its past makes every corner of it more meaningful.</p>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="timeline-section section" id="timeline">
+    <div class="container">
+        <h2 class="section-title">Belfast Through the Ages</h2>
+        <p class="section-subtitle">Click any era to learn more</p>
+        
+        <div class="timeline" id="timelineContainer">
+
+            <div class="timeline-item" data-era="early">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Pre-1600s</span>
+                    <h3>Early Settlement</h3>
+                    <p>A small ford crossing at the mouth of the River Farset, where it meets the Lagan.</p>
+                    
+                    
+                    <div class="card-extra" style="display:none;">
+                        <p>The name Belfast comes from the Irish 'Béal Feirste', meaning "mouth of the sandbar ford." Long before it was a city, it was a vital strategic crossing point. The Iron Age hillfort at McArt's Fort (Cave Hill) still overlooks the city, marking where early inhabitants once stood.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-era="plantation">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">1600s</span>
+                    <h3>The Plantation Era</h3>
+                    <p>Belfast receives its first Royal Charter in 1613, establishing it as a town under the Ulster Plantation.</p>
+                    
+                    
+                    <div class="card-extra" style="display:none;">
+                        <p>During the 17th century, the town began to grow under the influence of Sir Arthur Chichester. This period saw the arrival of English and Scottish settlers, laying the early street patterns that still exist in the city center today near High Street and Cornmarket.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-era="industrial">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">1800s</span>
+                    <h3>Industrial Revolution</h3>
+                    <p>Belfast becomes a global powerhouse in linen manufacturing and shipbuilding.</p>
+                    
+                    
+                    <div class="card-extra" style="display:none;">
+                        <p>By the mid-1800s, Belfast was the linen capital of the world, nicknamed "Linenopolis." The city's population skyrocketed as factories and shipyards transformed the skyline. It was the only city in Ireland to fully experience the same industrial boom as cities like Manchester or Liverpool.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-era="titanic">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">1912</span>
+                    <h3>RMS Titanic</h3>
+                    <p>The world's largest ship, built at Harland & Wolff, sets sail on her maiden voyage.</p>
+                    
+                    
+                    <div class="card-extra" style="display:none;">
+                        <p>Constructed in the iconic Arrol Gantry, the RMS Titanic represented the pinnacle of Belfast’s engineering might. Over 15,000 men worked at the Harland & Wolff shipyard during this era, making Belfast a global leader in maritime technology.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-era="troubles">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">1960s–1990s</span>
+                    <h3>The Troubles</h3>
+                    <p>Decades of political conflict between unionist and nationalist communities shape the city.</p>
+                    
+                    
+                    <div class="card-extra" style="display:none;">
+                        <p>This period of civil unrest significantly impacted the city's social and physical landscape. From the "Peace Walls" to the famous political murals, this era remains a deeply significant part of Belfast's complex history and identity.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-era="peace">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">1998–Present</span>
+                    <h3>Peace & Renaissance</h3>
+                    <p>The Good Friday Agreement brings peace and a cultural renaissance.</p>
+                    
+                    
+                    <div class="card-extra" style="display:none;">
+                        <p>Post-1998, Belfast has undergone
+  </section>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <!-- Facts Section -->
+  <section class="facts-section section">
+    <div class="container">
+      <h2 class="section-title">Belfast By Numbers</h2>
+      <div class="facts-grid">
+        <div class="fact-card">
+          <span class="fact-number" data-target="400">0</span><span class="fact-symbol">+</span>
+          <p>Years of recorded history.</p>
+        </div>
+        <div class="fact-card">
+          <span class="fact-number" data-target="340000">0</span><span class="fact-symbol">+</span>
+          <p>Population today.</p>
+        </div>
+        <div class="fact-card">
+          <span class="fact-number" data-target="1000+">0</span>
+          <p>Ships built by Harland and Wolff, including the world famous Titanic.</p>
+        </div>
+        <div class="fact-card">
+          <span class="fact-number" data-target="85">0</span>
+          <p>Height of Obel Tower (in meters). Ireland's tallest building. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="quote-section">
+    <div class="container">
+      <blockquote>
+        "Belfast is a city that has been through the fire and come out the other side — stronger, more open, and more welcoming than ever."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Must-Visit History Spots -->
+  <section class="spots-section section">
+    <div class="container">
+      <h2 class="section-title">Historic Places to Visit</h2>
+      <div class="spots-grid">
+        <div class="spot-card">
+          <div class="spot-icon">🚢</div>
+          <h3>Titanic Belfast</h3>
+          <p>The world-leading visitor experience telling the story of the most famous ship ever built, right where she was made.</p>
+        </div>
+        <div class="spot-card">
+          <div class="spot-icon">🏛️</div>
+          <h3>Belfast City Hall</h3>
+          <p>An iconic landmark built in 1906, the grand baroque building at the heart of the city centre.</p>
+        </div>
+        <div class="spot-card">
+          <div class="spot-icon">🎨</div>
+          <h3>Falls &amp; Shankill Murals</h3>
+          <p>The famous political murals of West Belfast tell the story of the Troubles in vivid colour.</p>
+        </div>
+        <div class="spot-card">
+          <div class="spot-icon">🏰</div>
+          <h3>Belfast Castle</h3>
+          <p>A stunning Victorian castle sitting on the slopes of Cave Hill, with panoramic views across the city.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Belfast Unfolded. Built for the curious traveler.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../js/History.js"></script>
+  <script src="../js/Form.js"></script>
+</body>
+</html>

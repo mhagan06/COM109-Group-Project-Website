@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelling To Belfast</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/travelpagestyle.css">
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="logo">Belfast<span>Unfolded</span></div>
+        
+        <div class="nav-links-container">
+            <div class="search-box">
+                <input type="text" id="headerSearch" placeholder="Search..." autocomplete="off">
+                <button onclick="executeSearch()">Go</button>
+                
+                <div id="searchSuggestions" class="suggestions-popup"></div>
+            </div>
+
+            <ul>
+            <li><a href="Home.html">Home</a></li> 
+            <li><a href="History.html">History</a></li>
+            <li><a href="Attractions.html">Attractions</a></li>
+            <li><a href="Travel.html" class="active-link">Travelling to Belfast</a></li>
+            <li><a href="Packages.html">Packages</a></li> 
+            <li><button id="cta-btn">Book Now</button></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <section class="hero">
+    <div class="hero-slide active" style="background-image: url('../assets/images/familybelfast.jpg');"></div>
+    
+    <div class="hero-content">
+        <h1>Travelling to Belfast</h1>
+        <a href="#attractions" class="btn-primary">Start Exploring</a>
+    </div>
+    </section>
+
+    <section id="attractions" class="info-section">
+        <div class="left-column">
+            <div class="dropdown-wrapper">
+            <button class="dropdown-btn">Belfast International Airport</button>
+            <div class="dropdown-content">
+                <p>Belfast International is served by multiple airlines with the main airlines being Easyjet, Ryanair and Jet2. There is links to Belfast from many major UK airports
+                and mutltiple European destinations. You can get from Belfast International Airport to Belfast City Centre in around 30 minutes by taking the Airport Express 300 bus, 
+                which runs frequently and is the cheapest option; taxis are available outside the terminal and offer a direct but more expensive ride; 
+                and private transfers can be pre‑booked for a smoother, faster arrival experience, all giving you straightforward ways to reach the heart of the city.
+                Car rental facilties are available at the airport if you are considering renting a car.
+                
+                </p>
+            </div>
+            </div>
+
+            <div class="dropdown-wrapper">
+            <button class="dropdown-btn">Belfast City Airport</button>
+            <div class="dropdown-content">
+                <p>Belfast City Airport has operations from multiple major airlines, such as Aer Lingus, Ryanair, British Airways and KLM, 
+                offering flights from most UK airports and multiple Euroeapen destinations.
+                You can reach Belfast City Centre from Belfast City Airport in just a few minutes by hopping on the Airport Express 600 bus, 
+                which runs every 20 minutes and takes around 10 minutes to arrive in the city centre; 
+                you can also take a train from nearby Sydenham train station for a quick and budget‑friendly trip, 
+                though it requires a short walk from the terminal; taxis and private transfers are the fastest and most direct options, 
+                getting you into the city centre in about 10 minutes. </p>
+            </div>
+            </div>
+
+            <div class="dropdown-wrapper">
+            <button class="dropdown-btn">Belfast Port</button>
+            <div class="dropdown-content">
+                <p>You can reach Belfast City Centre easily from Belfast Port after arriving by ferry, 
+                with the quickest option being a short taxi ride that takes around 10 minutes; 
+                the Metro 96 bus also runs between the port and the city centre for a low‑cost and convenient connection; and if you prefer to walk, 
+                it’s roughly a 30 minute walk along well signposted routes that follow the waterfront into the heart of the city.</p>
+            </div>
+            </div>
+
+            <div class="dropdown-wrapper">
+            <button class="dropdown-btn">Dublin Airport</button>
+            <div class="dropdown-content">
+                <p>You can travel from Dublin Airport to Belfast easily using several options: the most popular is the direct Aircoach or Translink Goldline coach, 
+                both running frequently from outside the terminals and taking around two hours to reach Belfast City Centre; 
+                driving via the M1 and A1 is straightforward and usually takes about 90 minutes depending on traffic; 
+                taxis and private transfers offer convenience but are the most expensive choice.
+                If you prefer rail, you can take a Dublin Bus or airport shuttle into Dublin Connolly Station and then board the Enterprise train to Belfast.</p>
+            </div>
+            </div>
+
+            <div class="dropdown-wrapper">
+            <button class="dropdown-btn">Travelling Northern Ireland</button>
+            <div class="dropdown-content">
+                <p>Northern Ireland is compact, well connected and incredibly easy to explore, with Belfast acting as a convenient hub for day trips and longer adventures. 
+                    Regular train and bus services link the city with every major town and region, meaning you can reach the Causeway Coast, the Mournes, 
+                    or the walled city of Derry-Londonderry in under a couple of hours. Whether you’re travelling for scenery, culture or coastline, journeys are straightforward and 
+                    frequent, making it simple to head out in the morning and be back in Belfast by evening to enjoy Belfast's nightlife. With short distances, 
+                    reliable transport and a growing network of routes, getting around Northern Ireland feels effortless, letting you experience the best of the region 
+                    at your own pace. Timetables are visible at transport stops or online on the Translink website</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <img src="../assets/images/airportbus.jpg" alt="Travel Belfast">
+
+            <p id = "p1"> With several airports, ferry connections, and quick access to other Irish transport hubs, Belfast is easy to reach 
+                from most European countries and almost every UK airport. Northern Ireland’s growing public transport network makes getting around 
+                Belfast, and the rest of the region, straightforward and convenient.
+                <br>
+                <br>
+                Tickets can be bought in person at bus or rail stops or through the Translink website online.
+            </p>
+
+            <a href="https://www.translink.co.uk" target="_blank" class="buytickets">Buy Tickets</a>
+
+            
+        </div>
+    </div>
+
+    <div class="map-section">
+        <h1 class="mapheader">Airport Overview</h1>
+        <div class ="maps">
+            <div class="map">
+                <h2 class="h2">Belfast International<br></h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87860.06413847033!2d-6.191558290802015!3d54.64295281465687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4861aace4780199d%3A0xe521a5763c476b15!2sBelfast%20International%20Airport!5e0!3m2!1sen!2suk!4v1776768540711!5m2!1sen!2suk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="map">
+                <h2 class="h2">Belfast City<br></h2>
+                <div class="map-frame">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36975.091495393775!2d-5.939777964062499!3d54.6049929139818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486109f4dce6882f%3A0xc024f68ac04c160c!2sBelfast%20City%20Airport!5e0!3m2!1sen!2suk!4v1776776110399!5m2!1sen!2suk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+                <div class="map">
+                <h2 class="h2">Dublin<br></h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d715204.3898749013!2d-7.22766722564652!3d53.92696858460126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486711be6993192f%3A0x55121bb5b725f355!2sDublin%20Airport!5e0!3m2!1sen!2suk!4v1776769080918!5m2!1sen!2suk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        </div>
+    </section> 
+     
+    <footer>
+        <p>&copy; 2026 Belfast Unfolded. Built for the curious traveler.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/traveladvicepagescript.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/Form.js"></script>
+
+</body>
+</html>
